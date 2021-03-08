@@ -4,7 +4,7 @@ import torch.nn as nn
 class BarlowTwinsLoss(torch.nn.Module):
 
     def __init__(self, device, lambda_param=5e-3):
-        super(CorrelationLoss, self).__init__()
+        super(BarlowTwinsLoss, self).__init__()
         self.lambda_param = lambda_param
         self.device = device
 
