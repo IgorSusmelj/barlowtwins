@@ -13,10 +13,16 @@ This is currently a work in progress. The code is a modified version of the SimS
 - [ ] report results on cifar-10
 - [ ] create PR to add to lightly
 
+### Installation
+
+`pip install requirements.txt`
+
 ### Dependencies
 
-- lightly==1.0.7
-
+- PyTorch
+- PyTorch Lightning
+- Torchvision
+- lightly
 
 
 ### Paper
