@@ -9,13 +9,13 @@ This is currently a work in progress. The code is a modified version of the SimS
 
 **Todo:**
 
-- [ ] warmup learning rate from 0
+- [X] warmup learning rate from 0
 - [ ] report results on cifar-10
 - [ ] create PR to add to lightly
 
 ### Installation
 
-`pip install requirements.txt`
+`pip install -r requirements.txt`
 
 ### Dependencies
 
