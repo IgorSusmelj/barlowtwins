@@ -1,1 +1,1 @@
-lightly==1.0.7
+lightly==1.0.8

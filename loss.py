@@ -8,9 +8,6 @@ class BarlowTwinsLoss(torch.nn.Module):
         self.lambda_param = lambda_param
         self.device = device
 
-    def off_diagonal(self, x: torch.Tensor):
-        return x.masked_select(~torch.eye(x.size(0), dtype=bool))
-
     def forward(self, z_a: torch.Tensor, z_b: torch.Tensor):
         # normalize repr. along the batch dimension
         z_a_norm = (z_a - z_a.mean(0)) / z_a.std(0) # NxD
@@ -24,7 +21,7 @@ class BarlowTwinsLoss(torch.nn.Module):
         # loss
         c_diff = (c - torch.eye(D,device=self.device)).pow(2) # DxD
         # multiply off-diagonal elems of c_diff by lambda
-        self.off_diagonal(c_diff).mul_(self.lambda_param)
+        c_diff[~torch.eye(D, dtype=bool)] *= self.lambda_param
         loss = c_diff.sum()
 
         return loss
