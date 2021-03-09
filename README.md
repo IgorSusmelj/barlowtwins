@@ -1,11 +1,12 @@
 # barlowtwins
-PyTorch Implementation of Barlow Twins paper.
+PyTorch Implementation of Barlow Twins paper: [Barlow Twins: Self-Supervised Learning via Redundancy Reduction](https://arxiv.org/pdf/2103.03230.pdf)
 
 
 This is currently a work in progress. The code is a modified version of the SimSiam implementation [here](https://github.com/IgorSusmelj/simsiam-cifar10) 
 
 - Time per epoch is around 40 seconds on a V100 GPU
 - GPU usage is around 9 GBytes
+- The current version reaches around 75% test accuracy
 
 **Todo:**
 
@@ -23,8 +24,3 @@ This is currently a work in progress. The code is a modified version of the SimS
 - PyTorch Lightning
 - Torchvision
 - lightly
-
-
-### Paper
-
-[Barlow Twins: Self-Supervised Learning via Redundancy Reduction](https://arxiv.org/pdf/2103.03230.pdf)
